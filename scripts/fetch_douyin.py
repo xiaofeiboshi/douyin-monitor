@@ -243,10 +243,11 @@ def fetch_all_videos() -> list[dict]:
 
     # Update sent history
     new_ids = [v["id"] for v in all_videos]
-    history["sent_video_ids"] = (sent_ids | set(new_ids))
+    merged_ids = list(sent_ids | set(new_ids))
     # Keep only last 1000 IDs to prevent file from growing too large
-    if len(history["sent_video_ids"]) > 1000:
-        history["sent_video_ids"] = list(history["sent_video_ids"])[-1000:]
+    if len(merged_ids) > 1000:
+        merged_ids = merged_ids[-1000:]
+    history["sent_video_ids"] = merged_ids
     history["last_run"] = datetime.now(SH_TZ).isoformat()
     save_sent_history(history)
 
