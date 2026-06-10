@@ -69,16 +69,29 @@ def send_email(subject: str, body: str, html_body: str = "") -> bool:
     msg.attach(MIMEText(html_body, "html", "utf-8"))
 
     try:
+        # Try SMTP_SSL first (port 465), fallback to STARTTLS (port 587)
+        sent = False
         if cfg.get("ssl", True):
-            server = smtplib.SMTP_SSL(cfg["host"], cfg["port"], timeout=30)
-        else:
-            server = smtplib.SMTP(cfg["host"], cfg["port"], timeout=30)
-            if cfg.get("starttls", False):
-                server.starttls()
+            try:
+                server = smtplib.SMTP_SSL(cfg["host"], cfg["port"], timeout=30)
+                server.login(cfg["smtp_user"], cfg["smtp_pass"])
+                server.sendmail(cfg["smtp_user"], cfg["recipient"], msg.as_string())
+                server.quit()
+                sent = True
+            except Exception as ssl_err:
+                print(f"SMTP_SSL failed ({ssl_err}), trying STARTTLS on port 587...")
+        
+        if not sent:
+            starttls_port = 587
+            server = smtplib.SMTP(cfg["host"], starttls_port, timeout=30)
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(cfg["smtp_user"], cfg["smtp_pass"])
+            server.sendmail(cfg["smtp_user"], cfg["recipient"], msg.as_string())
+            server.quit()
+            sent = True
 
-        server.login(cfg["smtp_user"], cfg["smtp_pass"])
-        server.sendmail(cfg["smtp_user"], cfg["recipient"], msg.as_string())
-        server.quit()
         print(f"Email sent successfully to {cfg['recipient']}")
         return True
     except Exception as e:
