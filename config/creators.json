@@ -1,0 +1,20 @@
+{
+  "creators": [
+    {
+      "name": "creator_1",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAA2rxtVGwx98EnrJDhjuWlPyQD8frzAIEY5MIWsiTNVzM"
+    },
+    {
+      "name": "creator_2",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAA4LqLxq7PLK9xEB5PPazcKTG-3oInPFTDwbqiSrRL_mg"
+    },
+    {
+      "name": "creator_3",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAWbNpkd5QfgC7txDdoimYHDRncLtFhf0Yb76Jyk3UkjAdwCBQXS_dZNtLMI2UC5qj"
+    }
+  ],
+  "settings": {
+    "since_hours": 24,
+    "max_videos_per_creator": 5
+  }
+}
