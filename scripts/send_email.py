@@ -1,12 +1,15 @@
 """
-Email sender - GitHub Actions version.
-Reads SMTP credentials from environment variables (GitHub Secrets).
+Notification sender - GitHub Actions version.
+Primary: Create GitHub Issue (triggers email from GitHub automatically).
+Fallback: SMTP email (for local runs or when GitHub API unavailable).
 """
 
 import json
 import os
 import smtplib
 import sys
+import urllib.request
+import urllib.error
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -15,7 +18,7 @@ from pathlib import Path
 
 SH_TZ = timezone(timedelta(hours=8))
 
-# SMTP server configs
+# SMTP server configs (for local fallback)
 SMTP_SERVERS = {
     "qq": {"host": "smtp.qq.com", "port": 465, "ssl": True},
     "163": {"host": "smtp.163.com", "port": 465, "ssl": True},
@@ -23,6 +26,106 @@ SMTP_SERVERS = {
     "gmail": {"host": "smtp.gmail.com", "port": 465, "ssl": True},
     "outlook": {"host": "smtp.office365.com", "port": 587, "ssl": False, "starttls": True},
 }
+
+
+def _is_github_actions() -> bool:
+    """Check if running in GitHub Actions environment."""
+    return os.environ.get("GITHUB_ACTIONS") == "true"
+
+
+def _get_github_token() -> str:
+    """Get GitHub token from environment (auto-provided in Actions)."""
+    return os.environ.get("GITHUB_TOKEN", "")
+
+
+def _get_repo() -> str:
+    """Get repo in owner/repo format from GITHUB_REPOSITORY env var."""
+    return os.environ.get("GITHUB_REPOSITORY", "")
+
+
+def create_github_issue(subject: str, body: str) -> bool:
+    """Create a GitHub Issue to trigger email notification.
+    
+    GitHub automatically sends email to repo watchers/owners when an Issue is created.
+    This works reliably from GitHub Actions since it uses HTTPS API (port 443),
+    not SMTP which is blocked on Actions runners.
+    """
+    token = _get_github_token()
+    repo = _get_repo()
+
+    if not token or not repo:
+        print("GitHub Issue: Missing GITHUB_TOKEN or GITHUB_REPOSITORY")
+        return False
+
+    url = f"https://api.github.com/repos/{repo}/issues"
+    labels = ["douyin-monitor"]
+
+    data = json.dumps({
+        "title": subject,
+        "body": body,
+        "labels": labels,
+    }).encode("utf-8")
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            issue_url = result.get("html_url", "")
+            issue_number = result.get("number", "?")
+            print(f"GitHub Issue #{issue_number} created: {issue_url}")
+            return True
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="replace")[:300]
+        print(f"GitHub Issue creation failed (HTTP {e.code}): {err_body}")
+        return False
+    except Exception as e:
+        print(f"GitHub Issue creation failed: {e}")
+        return False
+
+
+def close_old_monitor_issues() -> None:
+    """Close previous douyin-monitor issues to keep the repo clean.
+    Only keeps the latest issue open.
+    """
+    token = _get_github_token()
+    repo = _get_repo()
+    if not token or not repo:
+        return
+
+    url = (
+        f"https://api.github.com/repos/{repo}/issues"
+        f"?labels=douyin-monitor&state=open&per_page=10&sort=created&direction=desc"
+    )
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            issues = json.loads(resp.read().decode("utf-8"))
+
+        # Close all but skip the first one (most recent, just created)
+        for issue in issues[1:]:
+            close_url = f"https://api.github.com/repos/{repo}/issues/{issue['number']}"
+            close_data = json.dumps({"state": "closed"}).encode("utf-8")
+            close_headers = {**headers, "Content-Type": "application/json"}
+            req = urllib.request.Request(
+                close_url, data=close_data, headers=close_headers, method="PATCH"
+            )
+            urllib.request.urlopen(req, timeout=15)
+            print(f"  Closed old issue #{issue['number']}")
+    except Exception as e:
+        print(f"  Warning: Could not close old issues: {e}")
 
 
 def get_smtp_config() -> dict:
@@ -33,9 +136,7 @@ def get_smtp_config() -> dict:
     recipient = os.environ.get("EMAIL_RECIPIENT", "")
 
     if not all([smtp_user, smtp_pass, recipient]):
-        print("ERROR: Missing email config in environment variables.")
-        print("Required: EMAIL_SMTP_USER, EMAIL_SMTP_PASS, EMAIL_RECIPIENT")
-        sys.exit(1)
+        return {}
 
     server_cfg = SMTP_SERVERS.get(provider, SMTP_SERVERS["qq"])
 
@@ -48,28 +149,28 @@ def get_smtp_config() -> dict:
     }
 
 
-def send_email(subject: str, body: str, html_body: str = "") -> bool:
-    """Send email using configured SMTP server."""
+def send_smtp_email(subject: str, body: str) -> bool:
+    """Send email via SMTP (local fallback)."""
     cfg = get_smtp_config()
+    if not cfg:
+        print("SMTP: Missing email config in environment variables.")
+        return False
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = formataddr(("Douyin Monitor", cfg["smtp_user"]))
     msg["To"] = cfg["recipient"]
 
-    # Plain text version
     msg.attach(MIMEText(body, "plain", "utf-8"))
 
-    # HTML version (better rendering in email clients)
-    if not html_body:
-        html_body = f"""<html><body>
+    # Simple HTML version
+    html_body = f"""<html><body>
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
 <pre style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{body}</pre>
 </div></body></html>"""
     msg.attach(MIMEText(html_body, "html", "utf-8"))
 
     try:
-        # Try SMTP_SSL first (port 465), fallback to STARTTLS (port 587)
         sent = False
         if cfg.get("ssl", True):
             try:
@@ -80,7 +181,7 @@ def send_email(subject: str, body: str, html_body: str = "") -> bool:
                 sent = True
             except Exception as ssl_err:
                 print(f"SMTP_SSL failed ({ssl_err}), trying STARTTLS on port 587...")
-        
+
         if not sent:
             starttls_port = 587
             server = smtplib.SMTP(cfg["host"], starttls_port, timeout=30)
@@ -92,15 +193,30 @@ def send_email(subject: str, body: str, html_body: str = "") -> bool:
             server.quit()
             sent = True
 
-        print(f"Email sent successfully to {cfg['recipient']}")
+        print(f"SMTP email sent to {cfg['recipient']}")
         return True
     except Exception as e:
-        print(f"Failed to send email: {e}")
+        print(f"SMTP failed: {e}")
         return False
 
 
+def send_notification(subject: str, body: str) -> bool:
+    """Send notification - uses GitHub Issue in Actions, SMTP as local fallback."""
+    if _is_github_actions():
+        print("Running in GitHub Actions - creating Issue notification...")
+        success = create_github_issue(subject, body)
+        if success:
+            close_old_monitor_issues()
+            return True
+        else:
+            print("GitHub Issue failed, trying SMTP fallback...")
+            return send_smtp_email(subject, body)
+    else:
+        print("Running locally - sending SMTP email...")
+        return send_smtp_email(subject, body)
+
+
 if __name__ == "__main__":
-    # Read result from fetch_douyin.py output
     result_path = Path(__file__).parent.parent / "data" / "last_result.json"
     if not result_path.exists():
         print("No fetch result found. Run fetch_douyin.py first.")
@@ -113,5 +229,5 @@ if __name__ == "__main__":
     now = datetime.now(SH_TZ).strftime("%Y-%m-%d")
     subject = f"[抖音监控] {now} - {count}条新视频" if count > 0 else f"[抖音监控] {now} - 无新视频"
 
-    success = send_email(subject, email_body)
+    success = send_notification(subject, email_body)
     sys.exit(0 if success else 1)
