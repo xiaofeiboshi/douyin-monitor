@@ -2,13 +2,21 @@ name: Douyin Daily Monitor
 
 on:
   schedule:
+    # Run at 00:00 UTC = 08:00 CST every day
     - cron: '0 0 * * *'
-  workflow_dispatch:
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+  push:
+    branches: [main]
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    
+
+    permissions:
+      contents: write      # needed to commit sent_history.json
+      issues: write        # needed to create notification issues
+      actions: read
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,10 +34,7 @@ jobs:
 
       - name: Run Douyin Monitor
         env:
-          EMAIL_PROVIDER: ${{ secrets.EMAIL_PROVIDER }}
-          EMAIL_SMTP_USER: ${{ secrets.EMAIL_SMTP_USER }}
-          EMAIL_SMTP_PASS: ${{ secrets.EMAIL_SMTP_PASS }}
-          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/run.py
 
@@ -38,5 +43,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/sent_history.json data/last_result.json
-          git diff --staged --quiet || git commit -m "update: monitor history $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "update: monitor history $(TZ=Asia/Shanghai date +%Y-%m-%d)"
           git push
