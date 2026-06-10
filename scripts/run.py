@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from fetch_douyin import fetch_all_videos, format_for_email
-from send_email import send_email
+from send_email import send_notification
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
     subject = f"[抖音监控] {now} - {len(videos)}条新视频" if videos else f"[抖音监控] {now} - 无新视频"
     
     # Always send email (even if no new videos, to confirm the task ran)
-    success = send_email(subject, email_body)
+    success = send_notification(subject, email_body)
 
     # Save result for debugging
     result_path = Path(__file__).parent.parent / "data" / "last_result.json"
