@@ -5,8 +5,6 @@ on:
     # Run at 00:00 UTC = 08:00 CST every day
     - cron: '0 0 * * *'
   workflow_dispatch: # Allow manual trigger from GitHub UI
-  push:
-    branches: [main]
 
 jobs:
   monitor:
@@ -43,5 +41,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/sent_history.json data/last_result.json
-          git diff --staged --quiet || git commit -m "update: monitor history $(TZ=Asia/Shanghai date +%Y-%m-%d)"
-          git push
+          git diff --staged --quiet || (git commit -m "update: monitor history $(TZ=Asia/Shanghai date +%Y-%m-%d)" && git pull --rebase origin main && git push)
