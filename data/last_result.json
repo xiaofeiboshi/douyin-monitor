@@ -1,7 +1,38 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-08-20 09:39\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 5,
+  "videos": [
+    {
+      "id": "7676086817741749702",
+      "title": "如果你喜欢旅游，一定要看完中国这21个地方 16. If you like eating, go to Chengdu If you like history, go to Xi an If you ",
+      "url": "https://www.douyin.com/video/7676086817741749702",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7482770155588586810",
+      "title": "社保卡的三个隐藏功能",
+      "url": "https://www.douyin.com/video/7482770155588586810?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "6770259207913540877",
+      "title": "#宏琪说交通 抢绿灯前两秒和尾两秒，就是抢事故！@抖音小助手",
+      "url": "https://www.douyin.com/video/6770259207913540877?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7106621241557142796",
+      "title": "盘点黑化版美人鱼仿妆，童话故事里都是骗人的，不要太相信哦 #黑化版美人鱼",
+      "url": "https://www.douyin.com/video/7106621241557142796?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7555894473872444681",
+      "title": "牛姐宁愿去儿子直播间也不跟水果姐上太空⁉️ #MariahCarey #JimmyFallon #肥伦秀 #影子跟读 #英语跟读",
+      "url": "https://www.douyin.com/video/7555894473872444681?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-08-21 09:45\n共检测到 5 条新视频：\n\n--- creator_1 (5条) ---\n  1. 如果你喜欢旅游，一定要看完中国这21个地方 16. If you like eating, go to Chengdu If you like history, go to Xi an If you \n     链接: https://www.douyin.com/video/7676086817741749702\n  2. 社保卡的三个隐藏功能\n     链接: https://www.douyin.com/video/7482770155588586810?source=Baiduspider\n  3. #宏琪说交通 抢绿灯前两秒和尾两秒，就是抢事故！@抖音小助手\n     链接: https://www.douyin.com/video/6770259207913540877?source=Baiduspider\n  4. 盘点黑化版美人鱼仿妆，童话故事里都是骗人的，不要太相信哦 #黑化版美人鱼\n     链接: https://www.douyin.com/video/7106621241557142796?source=Baiduspider\n  5. 牛姐宁愿去儿子直播间也不跟水果姐上太空⁉️ #MariahCarey #JimmyFallon #肥伦秀 #影子跟读 #英语跟读\n     链接: https://www.douyin.com/video/7555894473872444681?source=Baiduspider-sdc\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-08-20T09:39:42.189382+08:00"
+  "run_time": "2026-08-21T09:45:15.261784+08:00"
 }
