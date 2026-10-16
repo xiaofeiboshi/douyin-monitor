@@ -1,7 +1,38 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-10-15 12:12\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 5,
+  "videos": [
+    {
+      "id": "7696805547940646180",
+      "title": "每日一句日语口语-有预约 我姓田中 #日语#日语入门#日语零基础#日语口语",
+      "url": "https://www.douyin.com/video/7696805547940646180",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7579213539903048986",
+      "title": "成都的烟火气都在巷子里",
+      "url": "https://www.douyin.com/video/7579213539903048986?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7411181089886096674",
+      "title": "商丘原来这么牛，迫不及待要去商丘 对商丘到底该如何定位? 这不仅仅是一个从微观层面对当地经济文化发展有重要价值的问题，而且也是一个从学术上需要严格审视的问题。",
+      "url": "https://www.douyin.com/video/7411181089886096674?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7406535528897662244",
+      "title": "《青芒师尊》第24集 双男主+修仙 #创作灵感 #小说#女生必看 #双男主#看了不后悔系列",
+      "url": "https://www.douyin.com/video/7406535528897662244?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7582117326653230355",
+      "title": "雨天玻璃模糊不清雨刮异响不安全，试试我一直在用这款油膜清洁擦，让你眼前一亮#汽车好物 #油膜去除剂",
+      "url": "https://www.douyin.com/video/7582117326653230355?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-10-16 12:08\n共检测到 5 条新视频：\n\n--- creator_1 (5条) ---\n  1. 每日一句日语口语-有预约 我姓田中 #日语#日语入门#日语零基础#日语口语\n     链接: https://www.douyin.com/video/7696805547940646180\n  2. 成都的烟火气都在巷子里\n     链接: https://www.douyin.com/video/7579213539903048986?source=Baiduspider\n  3. 商丘原来这么牛，迫不及待要去商丘 对商丘到底该如何定位? 这不仅仅是一个从微观层面对当地经济文化发展有重要价值的问题，而且也是一个从学术上需要严格审视的问题。\n     链接: https://www.douyin.com/video/7411181089886096674?source=Baiduspider\n  4. 《青芒师尊》第24集 双男主+修仙 #创作灵感 #小说#女生必看 #双男主#看了不后悔系列\n     链接: https://www.douyin.com/video/7406535528897662244?source=Baiduspider\n  5. 雨天玻璃模糊不清雨刮异响不安全，试试我一直在用这款油膜清洁擦，让你眼前一亮#汽车好物 #油膜去除剂\n     链接: https://www.douyin.com/video/7582117326653230355?source=Baiduspider-sdc\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-10-15T12:12:27.519496+08:00"
+  "run_time": "2026-10-16T12:09:00.463255+08:00"
 }
