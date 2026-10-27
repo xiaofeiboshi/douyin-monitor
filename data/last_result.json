@@ -1,7 +1,38 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-10-26 12:18\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 5,
+  "videos": [
+    {
+      "id": "7591414418983298410",
+      "title": "奶糖大挑战",
+      "url": "https://www.douyin.com/video/7591414418983298410?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7269612015340047670",
+      "title": "她可以称为俄版的武则天，一生有23位”男妃“，盘点其中最出色的4名情人，最后一位才是真爱 #叶卡捷琳娜 #叶卡捷琳娜大帝 #女帝",
+      "url": "https://www.douyin.com/video/7269612015340047670?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7274146637688098107",
+      "title": "第三十六集 伊莱科单浮球接54P继电器供排水#水电工 #技术分享 #继电器 #浮球开关",
+      "url": "https://www.douyin.com/video/7274146637688098107?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7584755196257897754",
+      "title": "Video 7584755196257897754",
+      "url": "https://www.douyin.com/video/7584755196257897754?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7376407924668632354",
+      "title": "妈妈一定要学会的八道早餐饼做法#抖音美食推荐官 #美食教程 #抖音美食 #早餐 #好吃到停不下来",
+      "url": "https://www.douyin.com/video/7376407924668632354?source=Baiduspider",
+      "creator_name": "creator_1"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-10-27 12:38\n共检测到 5 条新视频：\n\n--- creator_1 (5条) ---\n  1. 奶糖大挑战\n     链接: https://www.douyin.com/video/7591414418983298410?source=Baiduspider\n  2. 她可以称为俄版的武则天，一生有23位”男妃“，盘点其中最出色的4名情人，最后一位才是真爱 #叶卡捷琳娜 #叶卡捷琳娜大帝 #女帝\n     链接: https://www.douyin.com/video/7269612015340047670?source=Baiduspider\n  3. 第三十六集 伊莱科单浮球接54P继电器供排水#水电工 #技术分享 #继电器 #浮球开关\n     链接: https://www.douyin.com/video/7274146637688098107?source=Baiduspider\n  4. Video 7584755196257897754\n     链接: https://www.douyin.com/video/7584755196257897754?source=Baiduspider-sdc\n  5. 妈妈一定要学会的八道早餐饼做法#抖音美食推荐官 #美食教程 #抖音美食 #早餐 #好吃到停不下来\n     链接: https://www.douyin.com/video/7376407924668632354?source=Baiduspider\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-10-26T12:18:51.288290+08:00"
+  "run_time": "2026-10-27T12:38:13.389439+08:00"
 }
