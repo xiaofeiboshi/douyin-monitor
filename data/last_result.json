@@ -1,7 +1,38 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-11-02 13:34\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 5,
+  "videos": [
+    {
+      "id": "7703555346280069706",
+      "title": "工大今年又是安徽省工科考研首位竞选，因中科大现对考研学员出生身份要求太高，二是没学术名额，所以想稳的都又挤到工大了，所以今年的分数我推测准又标升。",
+      "url": "https://www.douyin.com/video/7703555346280069706",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7638614100764243398",
+      "title": "三星堆出土“来自上天的馈赠”",
+      "url": "https://www.douyin.com/video/7638614100764243398?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7415036024499326247",
+      "title": "第一集：迈达斯32数字调音台基本操作技术指南(6)M32话筒信号发送调试基本操作……#专业音响系统 #舞台灯光音响 #百万调音师 #调音台 #舞台演艺",
+      "url": "https://www.douyin.com/video/7415036024499326247?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7417681429930265856",
+      "title": "#沃尔沃卡车又上新了！来自瑞典的豪华重卡—2025款#沃尔沃FH ，安全配置拉满，细节更丰富，动力系统更高效。@沃尔沃卡车中国",
+      "url": "https://www.douyin.com/video/7417681429930265856?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7575466861538610442",
+      "title": "2025新款手提化妆包女大容量时尚复古高级感大号收纳包旅行洗漱包#女士化妆包 #时尚复古包 #大容量收纳 #旅行洗漱包 #2025新款",
+      "url": "https://www.douyin.com/video/7575466861538610442?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-11-03 14:15\n共检测到 5 条新视频：\n\n--- creator_1 (5条) ---\n  1. 工大今年又是安徽省工科考研首位竞选，因中科大现对考研学员出生身份要求太高，二是没学术名额，所以想稳的都又挤到工大了，所以今年的分数我推测准又标升。\n     链接: https://www.douyin.com/video/7703555346280069706\n  2. 三星堆出土“来自上天的馈赠”\n     链接: https://www.douyin.com/video/7638614100764243398?source=Baiduspider\n  3. 第一集：迈达斯32数字调音台基本操作技术指南(6)M32话筒信号发送调试基本操作……#专业音响系统 #舞台灯光音响 #百万调音师 #调音台 #舞台演艺\n     链接: https://www.douyin.com/video/7415036024499326247?source=Baiduspider\n  4. #沃尔沃卡车又上新了！来自瑞典的豪华重卡—2025款#沃尔沃FH ，安全配置拉满，细节更丰富，动力系统更高效。@沃尔沃卡车中国\n     链接: https://www.douyin.com/video/7417681429930265856?source=Baiduspider\n  5. 2025新款手提化妆包女大容量时尚复古高级感大号收纳包旅行洗漱包#女士化妆包 #时尚复古包 #大容量收纳 #旅行洗漱包 #2025新款\n     链接: https://www.douyin.com/video/7575466861538610442?source=Baiduspider-sdc\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-11-02T13:34:31.182879+08:00"
+  "run_time": "2026-11-03T14:15:19.887915+08:00"
 }
