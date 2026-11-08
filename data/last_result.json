@@ -1,7 +1,38 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-11-07 13:37\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 5,
+  "videos": [
+    {
+      "id": "7705247476252436687",
+      "title": "年报预审要发函，先查这份名单 年报预审要发函，先查这份名单 截至 2026 年 9 月 30 日，银行函证电子平台已接入会计师事务所 1472 家、金融机构 1853 家，其中接入 2 个平台的 21",
+      "url": "https://www.douyin.com/video/7705247476252436687",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7643427354605369265",
+      "title": "我对我的心肝be like",
+      "url": "https://www.douyin.com/video/7643427354605369265?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7245977637485612300",
+      "title": "学习做凉粉了，做成功了，不软不硬正好好 #自制凉粉",
+      "url": "https://www.douyin.com/video/7245977637485612300?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7255934968176610619",
+      "title": "三维动画 汽车抬头显HUD概念动画制作 新能源汽车行业 做视频，就找异声异色！ #三维动画 #广告公司 #3d动画 #汽车科技 #动画",
+      "url": "https://www.douyin.com/video/7255934968176610619?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7370893361353444627",
+      "title": "数学家 林群院士 院士讲科普 #院士 #院士在抖音 #院士风采 #科普",
+      "url": "https://www.douyin.com/video/7370893361353444627?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-11-08 13:39\n共检测到 5 条新视频：\n\n--- creator_1 (5条) ---\n  1. 年报预审要发函，先查这份名单 年报预审要发函，先查这份名单 截至 2026 年 9 月 30 日，银行函证电子平台已接入会计师事务所 1472 家、金融机构 1853 家，其中接入 2 个平台的 21\n     链接: https://www.douyin.com/video/7705247476252436687\n  2. 我对我的心肝be like\n     链接: https://www.douyin.com/video/7643427354605369265?source=Baiduspider\n  3. 学习做凉粉了，做成功了，不软不硬正好好 #自制凉粉\n     链接: https://www.douyin.com/video/7245977637485612300?source=Baiduspider\n  4. 三维动画 汽车抬头显HUD概念动画制作 新能源汽车行业 做视频，就找异声异色！ #三维动画 #广告公司 #3d动画 #汽车科技 #动画\n     链接: https://www.douyin.com/video/7255934968176610619?source=Baiduspider\n  5. 数学家 林群院士 院士讲科普 #院士 #院士在抖音 #院士风采 #科普\n     链接: https://www.douyin.com/video/7370893361353444627?source=Baiduspider-sdc\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-11-07T13:37:33.641866+08:00"
+  "run_time": "2026-11-08T13:39:16.386780+08:00"
 }
