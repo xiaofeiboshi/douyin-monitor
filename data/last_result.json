@@ -1,7 +1,98 @@
 {
-  "new_count": 0,
-  "videos": [],
-  "email_body": "抖音监控日报 - 2026-11-21 14:44\n\n今日没有检测到新视频更新。\n\n此邮件由 GitHub Actions 自动发送。",
+  "new_count": 15,
+  "videos": [
+    {
+      "id": "7599229697007815974",
+      "title": "张泽禹有求必应的具象化",
+      "url": "https://www.douyin.com/video/7599229697007815974?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7323587903190224164",
+      "title": "三天两晚，摩旅广东清远～贵州镇远古镇，贵州榕江县，花销不到2000元，来看看怎么玩的#摩旅 #爱机车爱生活 #镇远古镇 #骑车看风景",
+      "url": "https://www.douyin.com/video/7323587903190224164?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7323421272170302783",
+      "title": "挑战考察100个宜居城市，遍地温泉的腾冲太美了！ #云南 #定居 #世界这么大我想去看看 #旅游 #腾冲 @抖音小助手",
+      "url": "https://www.douyin.com/video/7323421272170302783?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7509505451894082828",
+      "title": "第一次在寺院餐厅吃饭，安师傅首次不予评分。 #旅行vlog #自驾旅行 #自驾西藏 #强巴林寺 #来咯来咯真的来咯",
+      "url": "https://www.douyin.com/video/7509505451894082828?source=Baiduspider-sdc",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7437568789983530277",
+      "title": "万水千山总是情，不来金玉堂怎么行。有缘千里来相会，金玉堂价格真不贵。",
+      "url": "https://www.douyin.com/video/7437568789983530277?source=Baiduspider",
+      "creator_name": "creator_1"
+    },
+    {
+      "id": "7591065272657400393",
+      "title": "你拍到超级月亮了吗",
+      "url": "https://www.douyin.com/video/7591065272657400393?source=Baiduspider",
+      "creator_name": "creator_2"
+    },
+    {
+      "id": "7303357016762862886",
+      "title": "幼儿识字第13节——“童拉推排身体舌脚棵香”10个汉字的学习 #趣味识字 #学汉字 #识字 #认字识字",
+      "url": "https://www.douyin.com/video/7303357016762862886?source=Baiduspider",
+      "creator_name": "creator_2"
+    },
+    {
+      "id": "7296143389341322534",
+      "title": "风冷单系统冰箱冷藏结冰的维修方法#家电维修 #知识分享 #冰箱#传递正能量 #技术分享 #专业的事交给专业的人来做更靠谱",
+      "url": "https://www.douyin.com/video/7296143389341322534?source=Baiduspider",
+      "creator_name": "creator_2"
+    },
+    {
+      "id": "7477178116172025151",
+      "title": "探秘赤山防空洞，赤山的红像极了革命先烈的血🩸适合周末亲子游 #历史 #防空洞 #赤山",
+      "url": "https://www.douyin.com/video/7477178116172025151?source=Baiduspider-sdc",
+      "creator_name": "creator_2"
+    },
+    {
+      "id": "7493873524075973945",
+      "title": "零基础学PPT第一课，基础功能的认识 #ppt #office办公技巧 #ppt模板设计 #ppt如何编辑文字 #干货分享",
+      "url": "https://www.douyin.com/video/7493873524075973945?source=Baiduspider",
+      "creator_name": "creator_2"
+    },
+    {
+      "id": "7710811677298272738",
+      "title": "挺好玩的，一起来合拍 和 @英语AI智能小程序 一起 #合拍",
+      "url": "https://www.douyin.com/video/7710811677298272738",
+      "creator_name": "creator_3"
+    },
+    {
+      "id": "7576633465819853736",
+      "title": "挑战电饭煲旺仔大馒头蛋糕",
+      "url": "https://www.douyin.com/video/7576633465819853736?source=Baiduspider",
+      "creator_name": "creator_3"
+    },
+    {
+      "id": "7243040685669010721",
+      "title": "#大学生#整活成#招生减章，各大校长化身赏金猎人，网友：全是#显眼包 #高考 #招生减章 #招生减章上分排位赛",
+      "url": "https://www.douyin.com/video/7243040685669010721?source=Baiduspider",
+      "creator_name": "creator_3"
+    },
+    {
+      "id": "7307568715699178789",
+      "title": "印度也想趁乱入局，一旦“拿下”缅甸若开邦，后果有多严重？ #地理 #地球 #卫星地图 #缅甸 #若开邦 #印度",
+      "url": "https://www.douyin.com/video/7307568715699178789?source=Baiduspider",
+      "creator_name": "creator_3"
+    },
+    {
+      "id": "7332760902363516223",
+      "title": "钣金展开单双切圆锥管圆管 #cad教程 #cad教学 #钣金展开放样 #铆工放样 #cad画图 #展开放样",
+      "url": "https://www.douyin.com/video/7332760902363516223?source=Baiduspider-sdc",
+      "creator_name": "creator_3"
+    }
+  ],
+  "email_body": "抖音监控日报 - 2026-11-22 14:13\n共检测到 15 条新视频：\n\n--- creator_1 (5条) ---\n  1. 张泽禹有求必应的具象化\n     链接: https://www.douyin.com/video/7599229697007815974?source=Baiduspider\n  2. 三天两晚，摩旅广东清远～贵州镇远古镇，贵州榕江县，花销不到2000元，来看看怎么玩的#摩旅 #爱机车爱生活 #镇远古镇 #骑车看风景\n     链接: https://www.douyin.com/video/7323587903190224164?source=Baiduspider\n  3. 挑战考察100个宜居城市，遍地温泉的腾冲太美了！ #云南 #定居 #世界这么大我想去看看 #旅游 #腾冲 @抖音小助手\n     链接: https://www.douyin.com/video/7323421272170302783?source=Baiduspider\n  4. 第一次在寺院餐厅吃饭，安师傅首次不予评分。 #旅行vlog #自驾旅行 #自驾西藏 #强巴林寺 #来咯来咯真的来咯\n     链接: https://www.douyin.com/video/7509505451894082828?source=Baiduspider-sdc\n  5. 万水千山总是情，不来金玉堂怎么行。有缘千里来相会，金玉堂价格真不贵。\n     链接: https://www.douyin.com/video/7437568789983530277?source=Baiduspider\n\n--- creator_2 (5条) ---\n  1. 你拍到超级月亮了吗\n     链接: https://www.douyin.com/video/7591065272657400393?source=Baiduspider\n  2. 幼儿识字第13节——“童拉推排身体舌脚棵香”10个汉字的学习 #趣味识字 #学汉字 #识字 #认字识字\n     链接: https://www.douyin.com/video/7303357016762862886?source=Baiduspider\n  3. 风冷单系统冰箱冷藏结冰的维修方法#家电维修 #知识分享 #冰箱#传递正能量 #技术分享 #专业的事交给专业的人来做更靠谱\n     链接: https://www.douyin.com/video/7296143389341322534?source=Baiduspider\n  4. 探秘赤山防空洞，赤山的红像极了革命先烈的血🩸适合周末亲子游 #历史 #防空洞 #赤山\n     链接: https://www.douyin.com/video/7477178116172025151?source=Baiduspider-sdc\n  5. 零基础学PPT第一课，基础功能的认识 #ppt #office办公技巧 #ppt模板设计 #ppt如何编辑文字 #干货分享\n     链接: https://www.douyin.com/video/7493873524075973945?source=Baiduspider\n\n--- creator_3 (5条) ---\n  1. 挺好玩的，一起来合拍 和 @英语AI智能小程序 一起 #合拍\n     链接: https://www.douyin.com/video/7710811677298272738\n  2. 挑战电饭煲旺仔大馒头蛋糕\n     链接: https://www.douyin.com/video/7576633465819853736?source=Baiduspider\n  3. #大学生#整活成#招生减章，各大校长化身赏金猎人，网友：全是#显眼包 #高考 #招生减章 #招生减章上分排位赛\n     链接: https://www.douyin.com/video/7243040685669010721?source=Baiduspider\n  4. 印度也想趁乱入局，一旦“拿下”缅甸若开邦，后果有多严重？ #地理 #地球 #卫星地图 #缅甸 #若开邦 #印度\n     链接: https://www.douyin.com/video/7307568715699178789?source=Baiduspider\n  5. 钣金展开单双切圆锥管圆管 #cad教程 #cad教学 #钣金展开放样 #铆工放样 #cad画图 #展开放样\n     链接: https://www.douyin.com/video/7332760902363516223?source=Baiduspider-sdc\n\n---\n此邮件由 GitHub Actions 自动发送。",
   "email_sent": true,
-  "run_time": "2026-11-21T14:44:47.560925+08:00"
+  "run_time": "2026-11-22T14:13:46.657579+08:00"
 }
